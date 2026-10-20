@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#11110f" />
+  <meta name="description" content="NOIR BARBER — klasyczne cięcia, nowoczesny styl. Przykładowa strona portfolio dla barbera." />
+  <title>NOIR BARBER — Klasyka z charakterem</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#11110f;--panel:#1a1a17;--gold:#d8b779;--cream:#f3eee5;--muted:#aaa69d;--line:#35342e}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--cream);font-family:'DM Sans',sans-serif;line-height:1.6}a{color:inherit;text-decoration:none}.wrap{width:min(1120px,calc(100% - 40px));margin:auto}.topline{height:4px;background:var(--gold)}
+    header{position:sticky;top:0;z-index:10;background:rgba(17,17,15,.94);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.08)}.nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{font-weight:700;letter-spacing:.18em;font-size:18px}.brand span{color:var(--gold)}.links{display:flex;align-items:center;gap:26px;color:#d4d0c7;font-size:13px}.links a:hover{color:var(--gold)}.nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;background:var(--gold);color:#171510;padding:12px 18px;font-weight:700;font-size:12px;letter-spacing:.08em;text-transform:uppercase;border:1px solid var(--gold);transition:.2s}.nav-cta:hover,.btn:hover{background:#ecd19b;transform:translateY(-1px)}.menu{display:none;background:none;border:1px solid var(--line);color:var(--cream);padding:8px 12px;font-size:20px}
+    .hero{min-height:600px;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:48px;padding:72px 0}.eyebrow{color:var(--gold);text-transform:uppercase;letter-spacing:.22em;font-size:11px;font-weight:700}.hero h1{font-family:'Playfair Display',serif;font-size:clamp(48px,6vw,78px);line-height:1.02;font-weight:500;margin:18px 0}.hero h1 em{color:var(--gold);font-style:normal}.hero p{color:var(--muted);max-width:440px;font-size:15px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.btn.secondary{background:transparent;color:var(--cream);border-color:#5b574d}.btn.secondary:hover{border-color:var(--gold);color:var(--gold)}.hero-note{font-size:11px!important;margin-top:20px}.hero-photo{min-height:450px;position:relative;background:linear-gradient(0deg,rgba(0,0,0,.42),transparent 55%),url('https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1100&q=85') center/cover;border:1px solid #3b382f}.photo-label{position:absolute;bottom:18px;left:18px;background:rgba(17,17,15,.88);padding:13px 16px;border-left:2px solid var(--gold);font-size:12px}.photo-label strong{display:block;letter-spacing:.1em}.photo-label span{color:var(--muted)}
+    .strip{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:19px 0;color:var(--gold);text-transform:uppercase;letter-spacing:.16em;font-size:11px;text-align:center}.section{padding:86px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:25px;margin-bottom:32px}.section h2{font-family:'Playfair Display',serif;font-weight:500;font-size:clamp(34px,4vw,48px);line-height:1.1;margin:10px 0}.section-head p{color:var(--muted);max-width:350px;font-size:13px}.services{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.service{background:var(--panel);border:1px solid var(--line);padding:25px}.service .num{color:var(--gold);font-size:11px;letter-spacing:.14em}.service h3{font-family:'Playfair Display',serif;font-size:24px;font-weight:500;margin:14px 0 8px}.service p{color:var(--muted);font-size:13px;min-height:44px}.price{display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--line);margin-top:22px;padding-top:16px;font-weight:700}.price span:last-child{color:var(--gold);font-size:20px}
+    .about{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:center;background:#171714;padding:44px}.about-photo{min-height:350px;background:url('https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=900&q=85') center/cover}.about p{color:var(--muted);font-size:14px}.ticks{display:grid;gap:10px;margin-top:20px;font-size:13px}.ticks span:before{content:'✦';color:var(--gold);margin-right:10px}
+    .gallery{display:grid;grid-template-columns:1.1fr .9fr .9fr;gap:12px}.gallery img{width:100%;height:270px;object-fit:cover;display:block;filter:saturate(.72)}.gallery img:first-child{height:330px}.gallery img:last-child{margin-top:30px}
+    .booking{padding:52px;background:linear-gradient(110deg,#24221b,#171714);border:1px solid #4a4334;display:flex;justify-content:space-between;align-items:center;gap:28px}.booking h2{margin:10px 0;font-size:clamp(32px,4vw,44px)}.booking p{color:var(--muted);max-width:470px;font-size:14px}.booking .btn{white-space:nowrap}
+    footer{padding:28px 0;border-top:1px solid var(--line);color:var(--muted);font-size:11px}.foot{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}.demo{color:#d8b779}
+    @media(max-width:760px){.wrap{width:min(100% - 28px,560px)}.nav{min-height:66px}.menu{display:block}.links{display:none;position:absolute;top:66px;left:0;right:0;background:#171714;padding:18px 22px 22px;flex-direction:column;align-items:stretch;border-bottom:1px solid var(--line)}.links.open{display:flex}.links .nav-cta{text-align:center}.hero{grid-template-columns:1fr;gap:28px;padding:48px 0}.hero-photo{min-height:350px;grid-row:1}.hero h1{font-size:52px}.section{padding:60px 0}.section-head{display:block}.services{grid-template-columns:1fr}.service p{min-height:0}.about{grid-template-columns:1fr;padding:20px;gap:24px}.about-photo{min-height:280px}.gallery{grid-template-columns:1fr 1fr}.gallery img,.gallery img:first-child{height:210px}.gallery img:last-child{margin-top:0}.booking{padding:28px;align-items:flex-start;flex-direction:column}.booking .btn{width:100%}}
+  </style>
+</head>
+<body>
+  <div class="topline"></div>
+  <header>
+    <nav class="nav wrap" aria-label="Menu główne">
+      <a class="brand" href="#start">NOIR<span>.</span>BARBER</a>
+      <button class="menu" id="menuBtn" aria-label="Otwórz menu" aria-expanded="false">☰</button>
+      <div class="links" id="navLinks">
+        <a href="#uslugi">Usługi</a><a href="#o-nas">O barberze</a><a href="#galeria">Galeria</a><a class="nav-cta" href="#rezerwacja">Umów wizytę ↗</a>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section class="hero wrap" id="start">
+      <div>
+        <div class="eyebrow">Barber studio · Przykładowa marka</div>
+        <h1>Klasyka.<br><em>Charakter.</em><br>Precyzja.</h1>
+        <p>Dobre cięcie to coś więcej niż fryzura. To detal, który robi różnicę. Wpadnij po świeży fade, klasyczne strzyżenie lub idealnie dopracowaną brodę.</p>
+        <div class="actions"><a class="btn" href="#rezerwacja">Zarezerwuj termin ↗</a><a class="btn secondary" href="#uslugi">Poznaj ofertę</a></div>
+        <p class="hero-note">★ 5.0 / Przykładowa ocena demonstracyjna — zastąp prawdziwymi opiniami klienta.</p>
+      </div>
+      <div class="hero-photo" role="img" aria-label="Klimatyczne wnętrze salonu barberskiego"><div class="photo-label"><strong>NOIR BARBER STUDIO</strong><span>Twój styl. Twoje zasady.</span></div></div>
+    </section>
+    <div class="strip">Precyzyjne cięcia · Dopracowane detale · Dobra atmosfera</div>
+    <section class="section wrap" id="uslugi">
+      <div class="section-head"><div><div class="eyebrow">Oferta</div><h2>Wybierz swój styl.</h2></div><p>Przejrzysty cennik i usługi dopasowane do Ciebie. Ceny poniżej są przykładowe — zmień je przed prezentacją klientowi.</p></div>
+      <div class="services">
+        <article class="service"><div class="num">01 / CUT</div><h3>Classic Cut</h3><p>Klasyczne strzyżenie dopasowane do kształtu twarzy i Twojego stylu.</p><div class="price"><span>30–40 min</span><span>60 zł</span></div></article>
+        <article class="service"><div class="num">02 / FADE</div><h3>Skin Fade</h3><p>Precyzyjne cieniowanie, czyste przejścia i dopracowane wykończenie.</p><div class="price"><span>40–50 min</span><span>70 zł</span></div></article>
+        <article class="service"><div class="num">03 / BEARD</div><h3>Beard Trim</h3><p>Modelowanie brody, kontur i pielęgnacja, która podkreśla rysy twarzy.</p><div class="price"><span>20–30 min</span><span>40 zł</span></div></article>
+      </div>
+    </section>
+    <section class="section wrap" id="o-nas">
+      <div class="about"><div class="about-photo" role="img" aria-label="Barber podczas pracy"></div><div><div class="eyebrow">Podejście</div><h2>Liczy się każdy detal.</h2><p>W NOIR stawiamy na indywidualne podejście, precyzyjne techniki i atmosferę, w której możesz na chwilę zwolnić. Zaczynamy od rozmowy, kończymy na cięciu dopracowanym z każdej strony.</p><div class="ticks"><span>Cięcie dopasowane do Ciebie</span><span>Dokładne wykończenie konturów</span><span>Przyjazna, spokojna atmosfera</span></div></div></div>
+    </section>
+    <section class="section wrap" id="galeria"><div class="section-head"><div><div class="eyebrow">Galeria</div><h2>Styl mówi sam za siebie.</h2></div><p>Wstaw tutaj prawdziwe zdjęcia prac barbera za jego zgodą. Zdjęcia demonstracyjne służą wyłącznie do prezentacji projektu.</p></div>
+      <div class="gallery"><img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=800&q=85" alt="Przykładowe strzyżenie barberskie"><img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=800&q=85" alt="Narzędzia barberskie"><img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=800&q=85" alt="Wnętrze salonu barberskiego"></div>
+    </section>
+    <section class="section wrap" id="rezerwacja"><div class="booking"><div><div class="eyebrow">Następny krok</div><h2>Gotowy na świeże cięcie?</h2><p>Napisz, wybierz usługę i znajdź dogodny termin. W wersji dla prawdziwego salonu podłączymy tutaj numer telefonu, WhatsApp lub system rezerwacji.</p></div><a class="btn" href="mailto:kontakt@example.com?subject=Rezerwacja%20wizyty%20-%20NOIR%20BARBER">Zapytaj o termin ↗</a></div></section>
+  </main>
+  <footer><div class="wrap foot"><span>© <span id="year"></span> NOIR BARBER · Projekt demonstracyjny do portfolio</span><span class="demo">FIKCYJNA MARKA — DEMO</span></div></footer>
+  <script>
+    const menuBtn=document.getElementById('menuBtn');
+    const navLinks=document.getElementById('navLinks');
+    menuBtn.addEventListener('click',()=>{const open=navLinks.classList.toggle('open');menuBtn.setAttribute('aria-expanded',String(open));menuBtn.textContent=open?'×':'☰';});
+    navLinks.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{navLinks.classList.remove('open');menuBtn.setAttribute('aria-expanded','false');menuBtn.textContent='☰';}));
+    document.getElementById('year').textContent=new Date().getFullYear();
+  </script>
+</body>
+</html>
